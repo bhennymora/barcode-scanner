@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/barcode-scanner/static/css/main.a1a88317.chunk.css",
-    "main.js": "/barcode-scanner/static/js/main.1619d4cf.chunk.js",
-    "main.js.map": "/barcode-scanner/static/js/main.1619d4cf.chunk.js.map",
+    "main.js": "/barcode-scanner/static/js/main.7410bf62.chunk.js",
+    "main.js.map": "/barcode-scanner/static/js/main.7410bf62.chunk.js.map",
     "runtime-main.js": "/barcode-scanner/static/js/runtime-main.10fb3236.js",
     "runtime-main.js.map": "/barcode-scanner/static/js/runtime-main.10fb3236.js.map",
-    "static/js/2.0acd943b.chunk.js": "/barcode-scanner/static/js/2.0acd943b.chunk.js",
-    "static/js/2.0acd943b.chunk.js.map": "/barcode-scanner/static/js/2.0acd943b.chunk.js.map",
+    "static/js/2.a81a7127.chunk.js": "/barcode-scanner/static/js/2.a81a7127.chunk.js",
+    "static/js/2.a81a7127.chunk.js.map": "/barcode-scanner/static/js/2.a81a7127.chunk.js.map",
     "index.html": "/barcode-scanner/index.html",
     "static/css/main.a1a88317.chunk.css.map": "/barcode-scanner/static/css/main.a1a88317.chunk.css.map",
-    "static/js/2.0acd943b.chunk.js.LICENSE.txt": "/barcode-scanner/static/js/2.0acd943b.chunk.js.LICENSE.txt"
+    "static/js/2.a81a7127.chunk.js.LICENSE.txt": "/barcode-scanner/static/js/2.a81a7127.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.10fb3236.js",
-    "static/js/2.0acd943b.chunk.js",
+    "static/js/2.a81a7127.chunk.js",
     "static/css/main.a1a88317.chunk.css",
-    "static/js/main.1619d4cf.chunk.js"
+    "static/js/main.7410bf62.chunk.js"
   ]
 }
