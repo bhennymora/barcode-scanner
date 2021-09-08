@@ -44,3 +44,7 @@ canvas.drawingBuffer {
   left: 0;
   top: 0;
 }
+
+ul {
+  list-style-type:  none;
+}

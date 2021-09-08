@@ -4,7 +4,7 @@ import "./App.css";
 
 var _scannerIsRunning = false;
 
-class BarcodeTextField extends React.Component {
+class QuaggaBarcode extends React.Component {
   constructor(props) {
     super(props);
     // This binding is necessary to make `this` work in the callback
@@ -140,4 +140,4 @@ class BarcodeTextField extends React.Component {
   }
 }
 
-export default BarcodeTextField;
+export default QuaggaBarcode;

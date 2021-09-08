@@ -1,16 +1,65 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { ScanSettings, Barcode } from "scandit-sdk";
+import QuaggaBarcode from "./QuaggaBarcode";
+import ScanditBarcode from "./ScanditBarcode"
 import './App.css';
-import BarcodeTextField from './BarcodeTextField';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <div id="scanner-container" />
-      <div>
-        <p style={{ display: "inline-block" }}>Barcode: </p>
-        <BarcodeTextField style={{ display: "inline-block" }} />
+    <Router>
+      <div className="App">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/quagga">Quagga Barcode</Link>
+            </li>
+            <li>
+              <Link to="/scandit">Scandit Barcode</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/quagga">
+            <div id="scanner-container" />
+            <div>
+              <p style={{ display: "inline-block" }}>Barcode: </p>
+              <QuaggaBarcode style={{ display: "inline-block" }} />
+			      </div>
+          </Route>
+          <Route path="/scandit">
+          <div id="scandit-barcode-result" />
+            <ScanditBarcode 
+              playSoundOnScan={true}
+              vibrateOnScan={true}
+              scanSettings={
+                new ScanSettings({
+                  enabledSymbologies: ["qr", "ean8", "ean13", "upca", "upce", "code128", "code39", "code93", "itf"],
+                  codeDuplicateFilter: 1000
+                })
+              }
+              onScan={scanResult => {
+                document.getElementById("scandit-barcode-result").innerHTML = scanResult.barcodes.reduce(function(
+                  string,
+                  barcode
+                ) {
+                  return string + Barcode.Symbology.toHumanizedName(barcode.symbology) + ": " + barcode.data + "<br>";
+                },
+                "");
+              }}
+              onError={error => {
+                console.error(error.message);
+              }}
+            />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
-
-export default App;
