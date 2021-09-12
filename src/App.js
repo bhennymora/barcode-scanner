@@ -39,7 +39,7 @@ export default function App() {
               playSoundOnScan={true}
               vibrateOnScan={true}
               scanningPaused={false}
-              videoFit={false}
+              videoFit={'cover'}
               accessCamera={true}
               scanSettings={
                 new ScanSettings({

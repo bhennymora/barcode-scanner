@@ -30,7 +30,7 @@ class ScanditBarcode extends Component {
     vibrateOnScan: PropTypes.bool,
     scanningPaused: PropTypes.bool,
     guiStyle: PropTypes.string,
-    videoFit: PropTypes.string = 'cover',
+    videoFit: PropTypes.string,
     scanSettings: PropTypes.object,
     enableCameraSwitcher: PropTypes.bool,
     enableTorchToggle: PropTypes.bool,
