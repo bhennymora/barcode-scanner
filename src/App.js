@@ -26,18 +26,21 @@ export default function App() {
         </nav>
 
         <Switch>
-          <Route path="/quagga">
+          <Route exact path="/quagga">
             <div id="scanner-container" />
             <div>
               <p style={{ display: "inline-block" }}>Barcode: </p>
               <QuaggaBarcode style={{ display: "inline-block" }} />
 			      </div>
           </Route>
-          <Route path="/scandit">
-          <div id="scandit-barcode-result" />
+          <Route exact path="/scandit">
+            <div id="scandit-barcode-result" />
             <ScanditBarcode 
               playSoundOnScan={true}
               vibrateOnScan={true}
+              scanningPaused={false}
+              videoFit={false}
+              accessCamera={true}
               scanSettings={
                 new ScanSettings({
                   enabledSymbologies: ["qr", "ean8", "ean13", "upca", "upce", "code128", "code39", "code93", "itf"],
